@@ -11,11 +11,14 @@ int f(const char* s1, const char* s2)
     
     memset(a,0,sizeof(int)*N*N);
     int max = 0;
+    //int ans = 0;
     for(i=1; i<=len1; i++){
+        //ans = 0;
         for(j=1; j<=len2; j++){
             if(s1[i-1]==s2[j-1]) {
-                a[i][j] = ; 
+                a[i][j] = a[i-1][j-1]+1;
                 if(a[i][j] > max) max = a[i][j];
+                continue;
             }
         }
     }
